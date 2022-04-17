@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>timer</title>
+  <script src="time.js" type="module"></script>
+  <script src="timer-data.js" type="module"></script>
+  <script src="script.js" type="module"></script>
+  <link rel="stylesheet" type="text/css" href="style.css">
+</head>
+<body>
+  <template id="timer-data">
+    <div class="main">
+      <h1 id="title"></h1>
+      <span id="time"></span>
+    </div>
+    <div class="run">
+      <button id="start">Run</button><button id="remove">Delete</button>
+    </div>
+  </template>
+  <main>
+    <ul class="main">
+      <li id="clock">
+        <div class="main"><time-time id="clock-main" repeat="12" start="1" step="1" r="30"></time-time></div>
+        <div class="utc">
+          <span id="clock-time">
+            <span style="--col-shadow:blue;--r:144deg"></span>
+            <span style="--col-shadow:rgb(85, 0, 255);--r:288deg"></span>
+          </span>
+          <span id="clock-utc-time"></span>
+        </div>
+      </li>
+      <li id="timer">
+        <div id="timer-main">
+          <time-time id="timer-main-item" step="1"></time-time>
+        </div>
+        <div id="timer-menu">
+          <ul id="timer-menu-box">
+            <li id="timer-menu-add"><button id="timer-menu-add-bu">add</button></li>
+          </ul>
+        </div>
+      </li>
+      <li id="stopwatch">hor</li>
+    </ul>
+  </main>
+  <nav class="down">
+    <ul>
+      <li id="clock-nav" onclick="CLI" data-hash="clock">CLOCK</li>
+      <li id="timer-nav" onclick="CLI" data-hash="timer">TIMER</li>
+      <li id="stopwatch-nav" onclick="CLI" data-hash="stopwatch">STOPWATCH</li>
+    </ul>
+  </nav>
+</body>
+</html>

@@ -1,0 +1,127 @@
+body{
+  width: 100vw;
+  height: 100vh;
+  margin: 0;
+  font-family: sans-serif;
+  background-color: rgb(247, 247, 247);
+}
+:root {
+  --col-bg: rgb(255, 255, 255);
+  --col-hov: rgb(57, 57, 57);
+  --col-hov-tow: rgb(0, 0, 0);
+}
+@media (prefers-color-scheme: dark) {
+  body{
+    background-color: rgb(28, 28, 28);
+  }
+}
+main{
+  width: 100vw;
+  height: 100vh;
+  overflow: hidden;
+}
+ul.main{
+  display: flex;
+  width: 300vw;
+  height: 100vh;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  overflow: hidden;
+  
+}
+ul.main li{
+  display: block;
+  width: 100vw;
+  height: 100vh;
+  overflow: hidden;
+}
+li#clock{
+  display: flex;
+  padding-top: 1%;
+}
+li#timer{
+  display: block flex;
+}
+li#timer div#timer-main{
+  display: block;
+  flex: 3;
+  padding-top: 1em;
+  width: 70vw;
+}
+li#timer div#timer-menu{
+  flex: 1;
+  box-shadow: 0 0 15px var(--col-hov-tow);
+}
+ul#timer-menu-box{
+  list-style: none;
+}
+ul#timer-menu-box li{
+  display: inline-block;
+}
+li#clock div.utc{
+  flex:1;
+}
+nav.down{
+  position: fixed;
+  bottom: 0;
+}
+span#clock-time{
+  display: block;
+  width: 10vw;
+  height: 10vw;
+  position: relative;
+  margin: 0 auto;
+  margin-top: 10vh;
+}
+span#clock-time span{
+  position:absolute;
+  display: block;
+  inset: 50%;
+  width: 100px;
+  height: 1px;
+  transform: translate(-50%,-50%) rotate(var(--r));
+  background-color: rgba(255, 255, 255, 0);
+}
+span#clock-time span::after{
+  box-shadow: 0 0 90px 20px var(--col-shadow);
+  content: "";
+  display: block;
+  width: 0px;
+  height: 0px;
+  background-color: rgba(255, 255, 255, 0);
+}
+span#clock-utc-time{
+  display: inline-block;
+  width: 100%;
+  font-size: 3em;
+  font-weight: 600;
+  color: var(--col-hov);
+  text-align: center;
+  margin-top: 20%;
+}
+nav.down ul{
+  width: 100vw;
+  height: 4em;
+  background-color: var(--col-bg);
+  display: flex;
+  margin: 0;
+  padding: 0;
+}
+nav.down ul li{
+  flex: 1;
+  display: inline-block;
+  height: 2em;
+  margin-bottom: 2em;
+  margin-left: 5%;margin-right: 5%;
+  list-style: none;
+  text-align: center;
+  padding-top: 1em;
+  color: var(--col-hov);
+  border-radius: 0 0 10px 10px;
+  transition: all 1s ease;
+}
+nav.down ul li:hover,nav.down ul li.tar{
+  background-color: var(--col-hov);
+  color: var(--col-bg);
+}
